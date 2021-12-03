@@ -14,7 +14,7 @@ bot.onText(/\/start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `hello ${msg.chat.first_name}, welcome...\n
+        `Assalamualaikum mas ${msg.chat.first_name}, welcome...\n
         click /show_url`
     );
 });
@@ -24,7 +24,8 @@ bot.onText(/\/show_url/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `
-            Contoh URL::/nhttps://esp-telebot.herokuapp.com/api/sensor/123/65/78 \nhttps://esp-telebot.herokuapp.com/api/test/cobacoba
+            https://esp-f12-41421110109-wahyu.herokuapp.com/api/sensor/123/65/78 \n
+            https://esp-f12-41421110109-wahyu.herokuapp.com/api/test/cobacoba
         `
     );
 });
@@ -42,7 +43,7 @@ router.get('/', (req, res, next) => {
   });
 });
 
-// https://esp-telebot.herokuapp.com/api/sensor/123/65/78
+// https://esp-f12-41421110109-wahyu.herokuapp.com/api/sensor/123/65/78
 router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
       bot.sendMessage(
@@ -63,7 +64,7 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   }
 });
 
-// https://esp-telebot.herokuapp.com/api/test/cobacoba
+// https://esp-f12-41421110109-wahyu.herokuapp.com/api/test/cobacoba
 router.get('/test/:key', function(req, res, next){
     bot.sendMessage(
             global_msg_id, //msg.id
